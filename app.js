@@ -967,9 +967,9 @@ function renderTask3(container) {
 
   const PLACES = [
     { id: 'pl1', img: 'https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&q=80&w=200&h=200', pos: 'center', cap: 'An empty diner at 3 AM' },
-    { id: 'pl2', img: 'https://images.unsplash.com/photo-1518118014377-ce99026402ea?auto=format&fit=crop&q=80&w=200&h=200', pos: 'center', cap: 'A crowded elevator' },
-    { id: 'pl3', img: 'https://images.unsplash.com/photo-1536411599380-60b64d852086?auto=format&fit=crop&q=80&w=200&h=200', pos: 'center', cap: 'A laundromat' },
-    { id: 'pl4', img: 'https://images.unsplash.com/photo-1515259728562-5950d8847844?auto=format&fit=crop&q=80&w=200&h=200', pos: 'center', cap: 'A park bench in the rain' }
+    { id: 'pl2', img: 'assets/crowded_elevator.png', pos: 'center', cap: 'A crowded elevator' },
+    { id: 'pl3', img: 'assets/laundromat.png', pos: 'center', cap: 'A laundromat' },
+    { id: 'pl4', img: 'assets/park_bench_rain.png', pos: 'center', cap: 'A park bench in the rain' }
   ];
 
   const MOODS = [
