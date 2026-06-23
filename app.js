@@ -270,6 +270,7 @@ const el = {
   dashboardView: document.getElementById("dashboard-view"),
   studioView: document.getElementById("studio-view"),
   portfolioSection: document.getElementById("portfolio-section"),
+  libraryView: document.getElementById("library-view"),
   
   // Grid
   taskGrid: document.getElementById("task-grid"),
@@ -546,9 +547,20 @@ function handleHashChange() {
       showDayView(dayNum);
       return;
     }
+  } else if (hash === "#library") {
+    showLibraryView();
+    return;
   }
   
   showDashboardView();
+}
+
+function showLibraryView() {
+  state.activeDay = null;
+  el.dashboardView.style.display = "none";
+  el.portfolioSection.style.display = "none";
+  el.studioView.style.display = "none";
+  el.libraryView.style.display = "block";
 }
 
 // Render the Day X view in the DOM
@@ -634,6 +646,7 @@ function showDayView(dayNum) {
   // Transition views
   el.dashboardView.style.display = "none";
   el.portfolioSection.style.display = "none";
+  el.libraryView.style.display = "none";
   el.studioView.style.display = "grid";
   
   // Render community section (locked or unlocked)
@@ -1164,6 +1177,7 @@ function showDashboardView() {
   
   // Transition views
   el.studioView.style.display = "none";
+  el.libraryView.style.display = "none";
   el.dashboardView.style.display = "block";
   
   // Clear community gallery DOM footprint
@@ -1567,6 +1581,20 @@ function setupEvents() {
   
   // Back to Dashboard button
   el.backBtn.addEventListener("click", closeDay);
+  
+  // Library Events
+  const libraryCard = document.getElementById("library-card");
+  const libraryBackBtn = document.getElementById("library-back-btn");
+  if (libraryCard) {
+    libraryCard.addEventListener("click", () => window.location.hash = "#library");
+    libraryCard.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        window.location.hash = "#library";
+      }
+    });
+  }
+  if (libraryBackBtn) libraryBackBtn.addEventListener("click", closeDay);
   
   // Handle browser back/forward navigation
   window.addEventListener("hashchange", handleHashChange);
