@@ -11,7 +11,7 @@
   --text-muted: #8878a8;        /* Pale lilac-grey */
   --color-accent: #5b3fa0;      /* Bold, rich purple */
   --color-accent-light: #e2d9f3; /* Soft tint of lavender */
-  --color-gold: #c49a2e;        /* Antique gold hover */
+  --color-gold: #7ab89a;        /* Pale green hover */
   --color-gold-light: #f7f5ff;  /* Soft lavender page */
   --border-color: #c5b8e0;      /* Lilac tinted border */
   --shadow-sm: 0 2px 8px rgba(26, 21, 48, 0.06);
@@ -36,7 +36,7 @@
   --text-muted: #6e6490;        /* Pale slate purple */
   --color-accent: #a98de8;      /* Lighter bright purple */
   --color-accent-light: #221c3a; /* Soft deep violet accent */
-  --color-gold: #e0b84a;        /* Warm gold hover */
+  --color-gold: #90d4b4;        /* Light pale green hover */
   --color-gold-light: #1e1a32;  /* Dark violet frame */
   --border-color: #3a3060;      /* Deep violet borders */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
