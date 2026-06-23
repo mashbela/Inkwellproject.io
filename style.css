@@ -2,21 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 :root {
-  /* Theme: Parchment Sage (Light Mode) */
-  --bg-primary: #e6ece1;        /* More pronounced sage paper */
-  --bg-secondary: #fdfdfa;      /* Crisp book cream page */
-  --bg-tertiary: #d1dacb;       /* Deeper sage tint */
-  --text-primary: #1e2c21;      /* Deep forest green-black ink */
-  --text-secondary: #4a5c4d;    /* Muted sage ink */
-  --text-muted: #839586;        /* Pale grey-sage */
-  --color-accent: #476a51;      /* Bold, rich Sage Green */
-  --color-accent-light: #d6e2d9; /* Soft tint of Sage */
-  --color-gold: #c39b56;        /* Antique Gold / Brass */
-  --color-gold-light: #fcfaf5;  /* Soft cream-gold page */
-  --border-color: #c4d1be;      /* Sage tinted margin border */
-  --shadow-sm: 0 2px 8px rgba(30, 44, 33, 0.05);
-  --shadow-md: 0 8px 20px rgba(30, 44, 33, 0.08);
-  --shadow-lg: 0 16px 36px rgba(30, 44, 33, 0.12);
+  /* Theme: Lilac & Ink (Light Mode) */
+  --bg-primary: #ede8f5;        /* Pale lilac parchment */
+  --bg-secondary: #fdfcff;      /* Near-white with lilac tint */
+  --bg-tertiary: #ddd5ef;       /* Deeper lavender tint */
+  --text-primary: #1a1530;      /* Deep indigo-black ink */
+  --text-secondary: #4a4068;    /* Muted violet ink */
+  --text-muted: #8878a8;        /* Pale lilac-grey */
+  --color-accent: #5b3fa0;      /* Bold, rich purple */
+  --color-accent-light: #e2d9f3; /* Soft tint of lavender */
+  --color-gold: #c49a2e;        /* Antique gold hover */
+  --color-gold-light: #f7f5ff;  /* Soft lavender page */
+  --border-color: #c5b8e0;      /* Lilac tinted border */
+  --shadow-sm: 0 2px 8px rgba(26, 21, 48, 0.06);
+  --shadow-md: 0 8px 20px rgba(26, 21, 48, 0.10);
+  --shadow-lg: 0 16px 36px rgba(26, 21, 48, 0.14);
   
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-editor: 'Lora', Georgia, serif;
@@ -27,18 +27,18 @@
 }
 
 [data-theme="dark"] {
-  /* Theme: Midnight Forest (Dark Mode) */
-  --bg-primary: #121814;        /* Very dark pine forest */
-  --bg-secondary: #1e2922;      /* Slate slate-sage */
-  --bg-tertiary: #27362c;       /* Dark grey-olive */
-  --text-primary: #e6ebe7;      /* Warm silver page print */
-  --text-secondary: #a0b2a4;    /* Muted silver green */
-  --text-muted: #6b8071;        /* Pale slate green */
-  --color-accent: #92c4a0;      /* Lighter bright sage */
-  --color-accent-light: #253329; /* Soft deep pine accent */
-  --color-gold: #d4b581;        /* Pale brass / antique gold */
-  --color-gold-light: #262723;  /* Dark brassy frame */
-  --border-color: #2e4234;      /* Deep green-grey borders */
+  /* Theme: Midnight Violet (Dark Mode) */
+  --bg-primary: #110f1e;        /* Very dark indigo night */
+  --bg-secondary: #1c1830;      /* Deep violet-slate */
+  --bg-tertiary: #252040;       /* Dark purple-grey */
+  --text-primary: #e8e4f5;      /* Warm silver lavender print */
+  --text-secondary: #a99dc8;    /* Muted violet silver */
+  --text-muted: #6e6490;        /* Pale slate purple */
+  --color-accent: #a98de8;      /* Lighter bright purple */
+  --color-accent-light: #221c3a; /* Soft deep violet accent */
+  --color-gold: #e0b84a;        /* Warm gold hover */
+  --color-gold-light: #1e1a32;  /* Dark violet frame */
+  --border-color: #3a3060;      /* Deep violet borders */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.5);
@@ -1465,7 +1465,7 @@ input.gap.revealed {
 .shelf-plank {
   width: 100%;
   height: 18px;
-  background: linear-gradient(180deg, #2d5a3d 0%, #1e3f2b 50%, #142d1e 100%);
+  background: linear-gradient(180deg, #3d2e8a 0%, #2a1f6e 50%, #1a1050 100%);
   border-radius: 3px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.25), inset 0 2px 4px rgba(255,255,255,0.1);
   position: relative;
@@ -1478,7 +1478,7 @@ input.gap.revealed {
   left: 0;
   right: 0;
   height: 8px;
-  background: linear-gradient(180deg, #0f2018, #0a150f);
+  background: linear-gradient(180deg, #120c3a, #0a0828);
   border-radius: 0 0 3px 3px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
