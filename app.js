@@ -2,24 +2,28 @@
 const PROMPTS = {
   1: {
     title: "Task 1",
+    name: "Enter the Writer's Workshop",
     excerpt: "Fill in the blanks activity. The user/student will have to fill in the blanks into a poem : “Valentine” by Carol Anne Duffy. Then the original poem will be revealed. The objective is not to have a guessing game but to have the writer experience flexibility and imagination within the constraints of a given “skeleton.”",
     prompt: "Fill in the blanks activity. The user/student will have to fill in the blanks into a poem : “Valentine” by Carol Anne Duffy. Then the original poem will be revealed. The objective is not to have a guessing game but to have the writer experience flexibility and imagination within the constraints of a given “skeleton.”",
     wordGoal: 200
   },
   2: {
     title: "Task 2",
+    name: "The Word Harvest",
     excerpt: "The Word Harvest\nA random choice of words to encourage free-writing in a playful manner",
     prompt: "The Word Harvest\nA random choice of words to encourage free-writing in a playful manner",
     wordGoal: 80
   },
   3: {
     title: "Task 3",
+    name: "Scene Generator",
     excerpt: "Scene Generator\nThis tasks proposes writing a scene out of visual cues plus an added situation or conflict that creates tension",
     prompt: "Scene Generator\nThis tasks proposes writing a scene out of visual cues plus an added situation or conflict that creates tension",
     wordGoal: 200
   },
   4: {
     title: "Task 4",
+    name: "Instructions on how to climb a staircase",
     excerpt: "Instructions manual. \"Instructions for Climbing a Ladder” by Julio Cortázar \"",
     prompt: "Along the lines of “Instructions for Climbing a Ladder” by Julio Cortázar (the story and its reading are shown below), write a set of instructions for one of the routinary actions listed:\n\n●	Instructions for getting ready before a date\n●	Instructions for opening an umbrella\n●	Instructions for wrapping up a present\n●	Instructions for eating spaghetti\n●	Instructions for spying on your spouse’s phone.",
     wordGoal: 300
@@ -412,11 +416,24 @@ function renderDashboard() {
     card.setAttribute("tabindex", "0");
     card.setAttribute("aria-label", `Day ${i}: ${task.title}. Status: ${statusText}`);
     
-    card.innerHTML = `
-      <div>
+    let contentHtml = "";
+    if (task.name) {
+      contentHtml = `
+        <div class="task-day">Day ${i}</div>
+        <h3 class="task-title">${task.title}</h3>
+        <p class="task-desc">${task.name}</p>
+      `;
+    } else {
+      contentHtml = `
         <div class="task-day">Day ${i}</div>
         <h3 class="task-title">${task.title}</h3>
         <p class="task-desc">${task.excerpt}</p>
+      `;
+    }
+
+    card.innerHTML = `
+      <div>
+        ${contentHtml}
       </div>
       <div class="task-card-footer">
         <span class="task-status-badge ${statusClass}">${statusText}</span>
@@ -939,6 +956,30 @@ function updateWordHarvestChecklist() {
 // Day 3: Character/Location/Mood Scene Generator
 // ----------------------------------------------------
 function renderTask3(container) {
+  const PEOPLE = [
+    { id: 'p1', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200&h=200', pos: 'center', cap: 'A tired nurse' },
+    { id: 'p2', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200&h=200', pos: 'center', cap: 'A businessman' },
+    { id: 'p3', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200&h=200', pos: 'center', cap: 'A teenager with dyed hair' },
+    { id: 'p4', img: 'https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&q=80&w=200&h=200', pos: 'center', cap: 'An elderly woman' },
+    { id: 'p5', img: 'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&q=80&w=200&h=200', pos: 'center', cap: 'A nervous student' },
+    { id: 'p6', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200', pos: 'center', cap: 'A street musician' }
+  ];
+
+  const PLACES = [
+    { id: 'pl1', img: 'https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&q=80&w=200&h=200', pos: 'center', cap: 'An empty diner at 3 AM' },
+    { id: 'pl2', img: 'https://images.unsplash.com/photo-1518118014377-ce99026402ea?auto=format&fit=crop&q=80&w=200&h=200', pos: 'center', cap: 'A crowded elevator' },
+    { id: 'pl3', img: 'https://images.unsplash.com/photo-1536411599380-60b64d852086?auto=format&fit=crop&q=80&w=200&h=200', pos: 'center', cap: 'A laundromat' },
+    { id: 'pl4', img: 'https://images.unsplash.com/photo-1515259728562-5950d8847844?auto=format&fit=crop&q=80&w=200&h=200', pos: 'center', cap: 'A park bench in the rain' }
+  ];
+
+  const MOODS = [
+    'Someone is lying.',
+    'One of them is about to leave forever.',
+    'They share a secret.',
+    'One owes the other money.',
+    'They just realized they are being watched.'
+  ];
+
   let picks = { people: new Set(), place: null, mood: null };
   
   // Load saved choices from localStorage
