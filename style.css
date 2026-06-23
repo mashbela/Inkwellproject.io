@@ -2,21 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 :root {
-  /* Theme: Parchment (Light Mode) */
-  --bg-primary: #f7f4ed;
-  --bg-secondary: #ffffff;
-  --bg-tertiary: #efebe2;
-  --text-primary: #2c2a29;
-  --text-secondary: #6e6a64;
-  --text-muted: #9c978f;
-  --color-accent: #2c5e43;      /* Forest Green */
-  --color-accent-light: #e6eee9;
-  --color-gold: #c5a059;        /* Warm Gold */
-  --color-gold-light: #f9f5eb;
-  --border-color: #e3decb;
-  --shadow-sm: 0 2px 8px rgba(44, 42, 41, 0.04);
-  --shadow-md: 0 8px 20px rgba(44, 42, 41, 0.06);
-  --shadow-lg: 0 16px 36px rgba(44, 42, 41, 0.08);
+  /* Theme: Parchment Sage (Light Mode) */
+  --bg-primary: #e6ece1;        /* More pronounced sage paper */
+  --bg-secondary: #fdfdfa;      /* Crisp book cream page */
+  --bg-tertiary: #d1dacb;       /* Deeper sage tint */
+  --text-primary: #1e2c21;      /* Deep forest green-black ink */
+  --text-secondary: #4a5c4d;    /* Muted sage ink */
+  --text-muted: #839586;        /* Pale grey-sage */
+  --color-accent: #476a51;      /* Bold, rich Sage Green */
+  --color-accent-light: #d6e2d9; /* Soft tint of Sage */
+  --color-gold: #c39b56;        /* Antique Gold / Brass */
+  --color-gold-light: #fcfaf5;  /* Soft cream-gold page */
+  --border-color: #c4d1be;      /* Sage tinted margin border */
+  --shadow-sm: 0 2px 8px rgba(30, 44, 33, 0.05);
+  --shadow-md: 0 8px 20px rgba(30, 44, 33, 0.08);
+  --shadow-lg: 0 16px 36px rgba(30, 44, 33, 0.12);
   
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-editor: 'Lora', Georgia, serif;
@@ -27,21 +27,21 @@
 }
 
 [data-theme="dark"] {
-  /* Theme: Midnight Ink (Dark Mode) */
-  --bg-primary: #121416;
-  --bg-secondary: #1a1d20;
-  --bg-tertiary: #22262a;
-  --text-primary: #e6e8ea;
-  --text-secondary: #a0a8b0;
-  --text-muted: #6c757d;
-  --color-accent: #d9a752;      /* Warm Amber Gold */
-  --color-accent-light: #2d261a;
-  --color-gold: #e2b363;
-  --color-gold-light: #1f1a12;
-  --border-color: #2b3036;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.4);
+  /* Theme: Midnight Forest (Dark Mode) */
+  --bg-primary: #121814;        /* Very dark pine forest */
+  --bg-secondary: #1e2922;      /* Slate slate-sage */
+  --bg-tertiary: #27362c;       /* Dark grey-olive */
+  --text-primary: #e6ebe7;      /* Warm silver page print */
+  --text-secondary: #a0b2a4;    /* Muted silver green */
+  --text-muted: #6b8071;        /* Pale slate green */
+  --color-accent: #92c4a0;      /* Lighter bright sage */
+  --color-accent-light: #253329; /* Soft deep pine accent */
+  --color-gold: #d4b581;        /* Pale brass / antique gold */
+  --color-gold-light: #262723;  /* Dark brassy frame */
+  --border-color: #2e4234;      /* Deep green-grey borders */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -52,6 +52,7 @@
 
 body {
   background-color: var(--bg-primary);
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
   color: var(--text-primary);
   font-family: var(--font-sans);
   line-height: 1.6;
@@ -72,7 +73,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 3px double var(--border-color);
   padding-bottom: 1.5rem;
   transition: var(--transition-smooth);
 }
@@ -216,7 +217,8 @@ header {
 .task-card {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-left: 12px solid var(--color-accent); /* Thicker Book spine cover look */
+  border-radius: 4px 12px 12px 4px; /* Classic book curve */
   padding: 1.5rem;
   cursor: pointer;
   position: relative;
@@ -224,14 +226,15 @@ header {
   flex-direction: column;
   justify-content: space-between;
   min-height: 200px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 3px 4px 10px rgba(0,0,0,0.03), inset 2px 0 0 rgba(255,255,255,0.2);
   transition: var(--transition-smooth);
 }
 
 .task-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--color-accent);
+  transform: translateY(-4px) rotate(1deg); /* Subtle vintage book lift/tilt */
+  box-shadow: 6px 8px 15px rgba(0,0,0,0.06), inset 2px 0 0 rgba(255,255,255,0.2);
+  border-color: var(--color-gold);
+  border-left-color: var(--color-gold); /* Spine shifts to gold */
 }
 
 .task-day {
@@ -316,12 +319,26 @@ header {
 .studio-sidebar {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 4px 12px 12px 4px; /* Open book left page feel */
   padding: 2rem;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   align-self: stretch;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+/* Page stack effect for sidebar */
+.studio-sidebar::after {
+  content: '';
+  position: absolute;
+  top: 4px; right: -4px; bottom: -4px; left: 4px;
+  border-radius: 4px 12px 12px 4px;
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  z-index: -1;
+  background-color: var(--bg-secondary);
 }
 
 .back-btn-container {
@@ -405,14 +422,32 @@ header {
   position: relative;
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 12px 4px 4px 12px; /* Open book right page feel */
   box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+/* Page stack effect for editor */
+.writing-area-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 4px; right: -4px; bottom: -4px; left: 4px;
+  border-radius: 12px 4px 4px 12px;
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  z-index: -1;
+  background-color: var(--bg-secondary);
   transition: var(--transition-smooth);
 }
 
 .writing-area-wrapper:focus-within {
   border-color: var(--color-accent);
-  box-shadow: var(--shadow-md);
+}
+
+.writing-area-wrapper:focus-within::after {
+  border-color: var(--color-accent);
 }
 
 .writing-textarea {
@@ -479,12 +514,19 @@ header {
 .portfolio-card {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-left: 8px solid var(--color-gold); /* Gold spine highlight */
+  border-radius: 4px 8px 8px 4px;
   padding: 1.5rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 2px 3px 8px rgba(0,0,0,0.04), inset 2px 0 0 rgba(255,255,255,0.3);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: var(--transition-smooth);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-4px) rotate(1deg);
+  box-shadow: 4px 6px 12px rgba(0,0,0,0.06), inset 2px 0 0 rgba(255,255,255,0.3);
 }
 
 .portfolio-card-header {
@@ -653,7 +695,8 @@ header {
 .community-card {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-left: 4px solid var(--border-color); /* Notebook spine look */
+  border-radius: 8px;
   padding: 2rem;
   box-shadow: var(--shadow-sm);
   transition: var(--transition-smooth);
@@ -661,6 +704,7 @@ header {
 
 .community-card.user-entry {
   border: 1px solid var(--color-gold);
+  border-left: 4px solid var(--color-gold);
   background: linear-gradient(to bottom right, var(--bg-secondary), var(--color-gold-light));
 }
 
@@ -1193,9 +1237,11 @@ input.gap.revealed {
 /* Modal Card */
 .modal-card {
   background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 2.5rem;
+  border: 2px solid var(--color-accent);
+  outline: 1px solid var(--color-gold);
+  outline-offset: -6px; /* Elegant book double-line gold outline border */
+  border-radius: 12px;
+  padding: 3rem 2.5rem;
   max-width: 440px;
   width: 90%;
   box-shadow: var(--shadow-lg);
