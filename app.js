@@ -25,59 +25,68 @@ const PROMPTS = {
     title: "Task 4",
     name: "Instructions on how to climb a staircase",
     excerpt: "Instructions manual. \"Instructions for Climbing a Ladder” by Julio Cortázar \"",
-    prompt: "Along the lines of “Instructions for Climbing a Ladder” by Julio Cortázar (the story and its reading are shown below), write a set of instructions for one of the routinary actions listed:\n\n●	Instructions for getting ready before a date\n●	Instructions for opening an umbrella\n●	Instructions for wrapping up a present\n●	Instructions for eating spaghetti\n●	Instructions for spying on your spouse’s phone.",
+    prompt: "Along the lines of “Instructions for Climbing a Ladder” by Julio Cortázar (the story and its reading are shown below), write a set of instructions for one of the plain actions listed:\n\n●	Instructions for getting ready before a date\n●	Instructions for opening an umbrella\n●	Instructions for wrapping up a present\n●	Instructions for eating spaghetti\n●	Instructions for spying on your spouse’s phone.",
     wordGoal: 300
   },
   5: {
     title: "Task 5",
+    name: "Observing people",
     excerpt: "Observing people",
     prompt: "Go to some public place, look around, observe people you see. Describe several people (two or three) that caught your eye.  It should be clear from your description why did you choose them or, even better, one could understand something about their character.",
     wordGoal: 250
   },
   6: {
     title: "Task 6",
+    name: "Observing situations",
     excerpt: "Observing situations",
     prompt: "Go to some public place (a court, a zoo or just a mall) where there are people talking in public, try to notice what is going on around you. Listen to dialogues, communications around you. Invent and write down a small story around the dialogues and situations you observed (200-300 words)",
     wordGoal: 250
   },
   7: {
     title: "Task 7",
+    name: "Essay",
     excerpt: "Essay",
-    prompt: "Task 7\nWrite an essay on one of the topics (happiness, anger, fear or any other feeling) – Write it the way so it would be obvious which topic you have chosen. Don’t use dialogue in your essay, try to show feelings through description. (200 – 300 words)",
+    prompt: "Write an essay on one of the topics (happiness, anger, fear or any other feeling) – Write it the way so it would be obvious which topic you have chosen. Don’t use dialogue in your essay, try to show feelings through description. (200 – 300 words)",
     wordGoal: 300
   },
   8: {
     title: "Task 8",
+    name: "Look at the world through your character's eyes",
     excerpt: "Look at the world through your character eyes",
-    prompt: "Task 3\nInvent your character, think of a space that is relevant to him (his room, his classroom, his place of work – anything). Describe it the way so one could understand why or how this place is important for the character. Consider what your character thinks of (but you don’t need to specifically write it down in the text), what he would know about this place and what he would not. You can mention only things that your character knows. Try to observe the world through his eyes (200 – 300 words)",
+    prompt: "Invent your character, think of a space that is relevant to him (his room, his classroom, his place of work – anything). Describe it the way so one could understand why or how this place is important for the character. Consider what your character thinks of (but you don’t need to specifically write it down in the text), what he would know about this place and what he would not. You can mention only things that your character knows. Try to observe the world through his eyes (200 – 300 words)",
     wordGoal: 300
   },
   9: {
     title: "Task 9",
+    name: "Show, Don't Tell",
     excerpt: "Show, Don’t Tell",
     prompt: "Character in a Queue - 100 words. A stranger is standing in line in front of you. Describe this person. By the end of the paragraph the reader should feel something about the person—without you ever saying what that feeling is. \"Show don't tell\" in a contained/restrained format.",
     wordGoal: 100
   },
   10: {
     title: "Task 10",
+    name: "Rewrite a paragraph from notable author",
     excerpt: "Rewrite a paragraph from notable author",
-    prompt: "Rewrite a paragraph from notable author: Use the format of the author but change the nouns, adjectives, verbs descriptions etc.. You can turn serious into comical or vice versa. Be creative!\n\na)\t“A filthy boy stood on the doorstep. He might be scrubbed of all that dirt, eventually—but not of so many orange freckles. No more than fourteen, with skinny, unstable legs like a marionette, he kept pitching forward, shifting soot into the hall. Still, the woman, who’d opened the door—easily amused, susceptible to beauty – found she couldn’t despise him”.\nZadie Smith, The Fraud\n\nb)\t\"She sent for one of those squat, plump little cakes called 'petites madeleines,' which look as though they had been moulded in the fluted valve of a scallop shell. And soon, mechanically, dispirited after a dreary day with the prospect of a depressing morrow, I raised to my lips a spoonful of the tea in which I had soaked a morsel of the cake.\"\nMarcel Proust, In Search of Lost Time: Swann's Way, Vol. 1\n\nc)\t“At first, Ifemelu forgot that she was someone else. In an apartment in South Philadelphia, a tired-faced woman opened the door and led her into a strong stench of urine.  The living room was dark, unaired, and she imagined the whole building steeped in months, even years, of accumulated urine, and herself working every day in this urine cloud.  From inside the apartment, a man was groaning, deep and eerie sounds; they were the groans of a person for whom groaning was the only choice left, and they frightened her.”\nChimamanda Ngozi Adichie, Americanah",
+    prompt: "Use the format of the author but change the nouns, adjectives, verbs descriptions etc.. You can turn serious into comical or vice versa. Be creative!\n\na)\t“A filthy boy stood on the doorstep. He might be scrubbed of all that dirt, eventually—but not of so many orange freckles. No more than fourteen, with skinny, unstable legs like a marionette, he kept pitching forward, shifting soot into the hall. Still, the woman, who’d opened the door—easily amused, susceptible to beauty – found she couldn’t despise him”.\nZadie Smith, The Fraud\n\nb)\t\"She sent for one of those squat, plump little cakes called 'petites madeleines,' which look as though they had been moulded in the fluted valve of a scallop shell. And soon, mechanically, dispirited after a dreary day with the prospect of a depressing morrow, I raised to my lips a spoonful of the tea in which I had soaked a morsel of the cake.\"\nMarcel Proust, In Search of Lost Time: Swann's Way, Vol. 1\n\nc)\t“At first, Ifemelu forgot that she was someone else. In an apartment in South Philadelphia, a tired-faced woman opened the door and led her into a strong stench of urine.  The living room was dark, unaired, and she imagined the whole building steeped in months, even years, of accumulated urine, and herself working every day in this urine cloud.  From inside the apartment, a man was groaning, deep and eerie sounds; they were the groans of a person for whom groaning was the only choice left, and they frightened her.”\nChimamanda Ngozi Adichie, Americanah",
     wordGoal: 300
   },
   11: {
     title: "Task 11",
+    name: "The Stolen First Line",
     excerpt: "The Stolen First Line",
-    prompt: "Take a famous opening line from literature and write the opposite story—same energy, completely different world. Following are five famous lines. Choose one of the five options provided.  Keep the first line as it is and use it as a launching pad to continue writing an opposite story.\nTrains writers to understand how tone, voice, and premise are set in a single sentence.\n\na)\t\"It was a bright cold day in April, and the clocks were striking thirteen.\"\nGeorge Orwell, 1984\n\nb)\t\"Mother died today. Or maybe yesterday; I can't be sure.\"\nAlbert Camus, The Stranger\n\nc)\t\"It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.\"\n Jane Austen, Pride and Prejudice\n\nd)\t\"124 was spiteful.\"\n Toni Morrison, Beloved\n\ne)\t\"Call me Ishmael.\"\n\tHerman Melville, Moby-Dick",
+    prompt: "Choose one of the five famous opening lines below. Keep the line exactly as written, then use it as the starting point for a story that takes the opposite direction—same energy, but a completely different world, premise, or outcome. This exercise will help you see how a single sentence establishes tone, voice, and narrative possibilities.\n\na) \"It was a bright cold day in April, and the clocks were striking thirteen.\" George Orwell, 1984 \n\nb) \"Mother died today. Or maybe yesterday; I can't be sure.\" Albert Camus, The Stranger \n\nc) \"It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.\" Jane Austen, Pride and Prejudice \n\nd) \"124 was spiteful.\" Toni Morrison, Beloved \n\ne) \"Call me Ishmael.\" Herman Melville, Moby-Dick",
     wordGoal: 300
   },
   12: {
     title: "Task 12",
+    name: "Five Senses, One Moment",
     excerpt: "Five Senses, One Moment",
-    prompt: "Pick an ordinary moment (waiting for the bus, buttering your toast) and write it using all five senses — but you can only use each sense once.\nDevelops precision and economy of language",
+    prompt: "Pick an ordinary moment (e.g. waiting for the bus, buttering your toast, planning a trip) and write it using all five senses, but you can only use each sense once.\nThis exercise will help you develop precision and economy of language.",
     wordGoal: 100
   },
   13: {
     title: "Task 13",
+    name: "Peter Elbow’s method",
     excerpt: "Peter Elbow’s method",
     prompt: "Choose your favourite task. Take the text you have written before and try to rewrite it from a scratch without looking at your original text or coping sentences from there. Let yourself get distracted and write everything that comes into your mind. Give yourself 30 minutes to do that. Then look through your text for 10 minutes and choose the best parts. Then, based on chosen parts, write everything down for another 30 minutes from the beginning. You can let yourself get distracted from the initial topic.  Repeat the process one more time. In the end you should have four different but at the same time similar texts. Which one do you like the most? Did freewriting help you find right words? Publish the best text (you can combine parts from different options) and describe your experience.",
     wordGoal: 400
@@ -549,14 +558,14 @@ function showDayView(dayNum) {
   const userWriting = state.writings[dayNum];
   
   // Populating prompt elements
-  el.promptDay.textContent = `Day ${dayNum}`;
-  el.promptTitle.textContent = prompt.title;
+  el.promptDay.textContent = `Task ${dayNum}`;
+  el.promptTitle.textContent = prompt.name || prompt.title;
   
   // Custom prompt rendering for Day 4 (Instructions manual)
   if (dayNum === 4) {
     el.promptContent.innerHTML = `
       <p style="margin-bottom: 1rem;">
-        Along the lines of “Instructions for Climbing a Ladder” by Julio Cortázar (the story and its reading are shown below), write a set of instructions for one of the routinary actions listed:
+        Along the lines of “Instructions for Climbing a Ladder” by Julio Cortázar (the story and its reading are shown below), write a set of instructions for one of the plain actions listed:
       </p>
       <ul class="routinary-list" style="margin-left: 1.5rem; margin-bottom: 1.5rem; font-size: 0.9rem; list-style-type: disc;">
         <li>Instructions for getting ready before a date</li>
@@ -576,8 +585,13 @@ function showDayView(dayNum) {
         <p>Said part being placed upon the first foothold, and in order to abbreviate we will hitherto call it “foot”, the equivalent part on the left is then removed (also called foot, but one must not confuse it with the aforementioned foot.) and raising it to the height of the foot, it is to be made to follow until it is placed upon the second foothold, upon which the foot may now may rest, and upon the first the other foot may rest. (The first footholds are always the most difficult, until acquiring the necessary coordination. The coincidence of the name between foot and foot make the explanation difficult. Be especially careful to not raise the foot and the foot at the same time.) Arriving in this manner to the second foothold, it is enough to alternate the movements until one finds oneself at the end of the stairs. One can easily leave them with a light blow of the heel that fixes it in its place, from which it shall not move until the moment of descent.</p>
       </div>
     `;
+  } else if (dayNum === 9) {
+    el.promptContent.innerHTML = `
+      <p style="margin-bottom: 1.5rem; font-style: italic;">Character in a Queue - 100 Words</p>
+      <p>A stranger is standing in line in front of you. Describe this person. By the end of the paragraph the reader should feel something about the person—without you ever saying what that feeling is. "Show don't tell" in a contained/restrained format.</p>
+    `;
   } else {
-    el.promptContent.textContent = prompt.prompt;
+    el.promptContent.innerHTML = prompt.prompt.replace(/\n/g, '<br>');
   }
   
   el.promptWordGoal.textContent = `${prompt.wordGoal} words recommended`;
